@@ -1,5 +1,6 @@
 label introduction:    
     show black
+    play music forest
     "Deep in the Black Forest, in a house made of candy, a wicked witch worries."
     witch "Where is it?"
     show room interior
@@ -76,6 +77,7 @@ label intro3:
     "Perfect..."
     witch "Ah, yes, coming dearie!"
     "You immediately put on your nicest, least-witchy face, and open the door to the solution to all of your problems."
+    show bg door view
     show kids
     witch "There's two of you?"
     h "Ma'am, may we please spend the night! It's getting dark outside and we need a place to stay!"
@@ -91,7 +93,7 @@ label intro3:
     "This'll be as easy as cake."
     "..."
     "Wait…"
+    hide kids
     show black
-    with fade
 
     jump d1

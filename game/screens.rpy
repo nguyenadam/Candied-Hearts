@@ -295,7 +295,7 @@ screen navigation():
         
         if renpy.get_screen("main_menu"):
             xalign 0.5
-            yalign 0.8
+            yalign 0.9
             style_prefix "main_menu"
         else:
             xpos gui.navigation_xpos
@@ -387,8 +387,8 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+            # text "[config.name!t]":
+            #     style "main_menu_title"
 
             text "[config.version]":
                 style "main_menu_version"

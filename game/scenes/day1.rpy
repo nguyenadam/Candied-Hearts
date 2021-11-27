@@ -1,17 +1,31 @@
 label d1:
+    scene room interior with fade
     "It's a beautiful morning in the Black Forest."
+    
     "The sun is shining, the birds are singing, and the forest animals are eating your candy house. What a nice, peaceful-"
+    
     with hpunch
+
     witch "{i}SHOO YOU FILTHY ANIMALS!{/i}"
+
     "A doe stares at you as it presses its tongue against your sugar glass window panes, undisturbed and completely unshooed."
+    
     witch "Go on! Git! Sugar glass ain't cheap, ya know!"
+    
     "You smack the glass a few times, but the deer continues its lazy destruction of property."
-    show hansel stunned
+    
+    show hansel stunned at midleft with easeinleft
+    
     h "What's going on?!"
+    
     witch "Those darn animals are eating my house again!"
+    
     h "Ma'am, please!"
+    
     witch "What?"
-    show gretel scared
+    
+    show gretel scared at midright with easeinright
+    
     g "..."
 
     menu:
@@ -62,9 +76,9 @@ label D1_1:
     witch "Cookies! Fun! Now, go take care of that deer!"
     show gretel bright_eyed
     g "Okay!"
-    #<GRETEL LEAVES>
+    hide gretel with moveoutright
     "Gretel leaves with a sudden pep in her step."
-    #<HANSEL LEAVES>
+    hide hansel with moveoutleft
     "A moment later, you can see her through the sugar glass gently leading the doe away from your windows. An excited awe simmers beneath her controlled calm, as to not frighten the animal."
     "By the time Gretel's led the deer away, Hansel's tugging on your sleeve."
     show hansel embarrassed
@@ -77,9 +91,9 @@ label D1_1:
     h "Maybe… let's just go make some breakfast."
     witch "Yes, the cookies!"
     h "Yeah… cookies…"
-    #<HANSEL LEAVES>
+    hide hansel with fade
 
-    scene bg kitchen
+    scene bg kitchen with fade
     "While Gretel's busy taking care of the animals outside, you and Hansel make the cookie dough and drop dollops onto a metal tray."
     show hansel quiet
     h "I still think we shouldn't have cookies for breakfast."
