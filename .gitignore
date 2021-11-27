@@ -2,3 +2,7 @@
 *.rpyb
 *.rpyc
 *.rpymc
+*.save
+log.txt
+traceback.txt
+errors.txt

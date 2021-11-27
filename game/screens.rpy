@@ -292,10 +292,16 @@ style quick_button_text:
 screen navigation():
 
     vbox:
-        style_prefix "navigation"
-
-        xpos gui.navigation_xpos
-        yalign 0.5
+        
+        if renpy.get_screen("main_menu"):
+            xalign 0.5
+            yalign 0.8
+            style_prefix "main_menu"
+        else:
+            xpos gui.navigation_xpos
+            yalign 0.5
+            style_prefix "navigation"
+        
 
         spacing gui.navigation_spacing
 
@@ -334,17 +340,26 @@ screen navigation():
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
 
-
+style main_menu_button is gui_button
+style main_menu_button_text is gui_button_text
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
+
+style main_menu_button:
+    size_group "navigation"
+    properties gui.button_properties("navigation_button")
 
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
 
+style main_menu_button_text:
+    properties gui.button_text_properties("navigation_button")
+    xalign 0.5
+
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-
+    xalign 0
 
 ## Main Menu screen ############################################################
 ##
@@ -389,7 +404,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
