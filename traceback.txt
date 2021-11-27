@@ -1,0 +1,40 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 88, in script
+    play sound knocking
+  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 88, in <module>
+    play sound knocking
+NameError: name 'knocking' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 88, in script
+    play sound knocking
+  File "C:\Users\nguye\Documents\Renpy\renpy-7.4.10-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\nguye\Documents\Renpy\renpy-7.4.10-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\nguye\Documents\Renpy\renpy-7.4.10-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\nguye\Documents\Renpy\renpy-7.4.10-sdk/renpy/python.py", line 2276, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\nguye\Documents\Renpy\renpy-7.4.10-sdk/renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 88, in <module>
+    play sound knocking
+NameError: name 'knocking' is not defined
+
+Windows-10-10.0.19041
+Ren'Py 7.4.10.2178
+Candied Hearts 1.0
+Fri Nov 26 19:05:49 2021
