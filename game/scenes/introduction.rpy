@@ -93,3 +93,5 @@ label intro3:
     "Wait…"
     show black
     with fade
+
+    jump d1
